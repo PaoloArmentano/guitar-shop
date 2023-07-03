@@ -21,8 +21,7 @@ function Guitar(name, price, stock){
     allGuitars.push(this);
 }
 
-const pinky = new Guitar("Fender Strat", "Price: £2000", "hi");
-console.log(pinky);
+
 
 function renderGuitars() {
     let ul = document.querySelector("ul");
@@ -35,9 +34,20 @@ function renderGuitars() {
       guitarName.textContent = allGuitars[i].name;
       container.appendChild(guitarName)
 
-      
+      let guitarPrice = document.createElement("p");
+      guitarPrice.textContent = allGuitars[i].price;
+      container.appendChild(guitarPrice)
+
+      let guitarStock = document.createElement("p");
+      guitarStock.textContent = allGuitars[i].stock;
+      container.appendChild(guitarStock)
+
+
     }
   }
+
+const pinky = new Guitar("Fender Strat", "Price: £2000", "hi");
+console.log(pinky);
 // declare variable guitar container
 // create function render guitars
 // this function will loop through array, everytime it loops, it will create card through dom manipulation 
