@@ -2,7 +2,7 @@
 
 console.log("Welcome to my guitar shop");
 
-const container = document.getElementById("container")
+const guitarContainer = document.getElementById("guitar-container");
 const card = document.getElementById("guitar-card");
 const img = document.getElementById("guitar-image");
 const guitarName = document.getElementById("guitar-name");
@@ -16,14 +16,14 @@ const allGuitars = [];
 
 function Guitar(name, src, price, stock) {
   this.name = name;
-  this.src = "./images/" + src + ".jpg";
+  this.src = "./images/" + src;
   this.price = price;
   this.stock = stock;
   allGuitars.push(this);
 }
 
 function renderGuitars() {
-  const guitarContainer = document.getElementById("guitar-container");
+  
 
   for (let i = 0; i < allGuitars.length; i++) {
     const guitar = allGuitars[i];
@@ -56,8 +56,10 @@ function renderGuitars() {
   }
 }
 
-const pinky = new Guitar("Fender Strat", "fender-pink", "Price: £1000", "In stock");
-console.log(pinky);
+const pinky = new Guitar("Fender Strat", "fender-pink.jpg", "Price: £1000", "In stock");
+const angelico = new Guitar("D'Angelico Premier Mini", "angelico.jpg", "Price: £699", "In stock");
+const gibson = new Guitar("Gibson ES 335", "gibson335.webp", "Price: £4200", "In stock");
+
 
 renderGuitars();
 // declare variable guitar container
