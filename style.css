@@ -4,6 +4,11 @@
     color: black;
     font-family: 'Quicksand', sans-serif;
     /* font-family: 'Roboto', sans-serif; */
+    font-size: 10px;
+}
+
+h1{
+    font-size: 30px;
 }
 
 ul, ol, li{
@@ -27,9 +32,13 @@ nav {
 }
 
 .guitar-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     border: 1px solid black;
-    width: 200px;
-    height: 300px;
+    width: 130px;
+    height: 220px;
     border-radius: 5px;
     padding: 10px;
     margin: 20px 30px;

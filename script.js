@@ -59,6 +59,7 @@ function renderGuitars() {
 const pinky = new Guitar("Fender Strat", "fender-pink.jpg", "Price: £1000", "In stock");
 const angelico = new Guitar("D'Angelico Premier Mini", "angelico.jpg", "Price: £699", "In stock");
 const gibson = new Guitar("Gibson ES 335", "gibson335.webp", "Price: £4200", "In stock");
+const lowden = new Guitar("Lowden Wee 25", "lowden.jpg", "Price: £2700", "Out of stock");
 
 
 renderGuitars();
