@@ -10,44 +10,56 @@ const guitarPrice = document.getElementById("price");
 const guitarStock = document.getElementById("stock");
 const button = document.getElementById("basket-btn");
 
+console.log("Welcome to my guitar shop");
+
 const allGuitars = [];
 
-
-function Guitar(name, price, stock){
-    this.name = name;
-    this.img = "./images/" + name + ".jpg";
-    this.price = price;
-    this.stock = stock;
-    allGuitars.push(this);
+function Guitar(name, price, stock) {
+  this.name = name;
+  this.img = "./images/" + name + ".jpg";
+  this.price = price;
+  this.stock = stock;
+  allGuitars.push(this);
 }
 
-
-
 function renderGuitars() {
-    let ul = document.querySelector("ul");
-    for (let i = 0; i < allGuitars.length; i++) {
-      let guitarImage = document.createElement("img");
-      guitarImage.textContent = allGuitars[i].img;
-      ul.appendChild(li);
+  const guitarContainer = document.getElementById("guitar-container");
 
-      let guitarName = document.createElement("p")
-      guitarName.textContent = allGuitars[i].name;
-      container.appendChild(guitarName)
+  for (let i = 0; i < allGuitars.length; i++) {
+    const guitar = allGuitars[i];
 
-      let guitarPrice = document.createElement("p");
-      guitarPrice.textContent = allGuitars[i].price;
-      container.appendChild(guitarPrice)
+    const guitarCard = document.createElement("div");
+    guitarCard.setAttribute("class", "guitar-card");
 
-      let guitarStock = document.createElement("p");
-      guitarStock.textContent = allGuitars[i].stock;
-      container.appendChild(guitarStock)
+    const guitarImage = document.createElement("img");
+    guitarImage.setAttribute("src", guitar.img);
+    guitarImage.setAttribute("alt", guitar.name);
+    guitarCard.appendChild(guitarImage);
 
+    const guitarName = document.createElement("p");
+    guitarName.textContent = guitar.name;
+    guitarCard.appendChild(guitarName);
 
-    }
+    const guitarPrice = document.createElement("p");
+    guitarPrice.textContent = guitar.price;
+    guitarCard.appendChild(guitarPrice);
+
+    const guitarStock = document.createElement("p");
+    guitarStock.textContent = guitar.stock;
+    guitarCard.appendChild(guitarStock);
+
+    const addButton = document.createElement("button");
+    addButton.textContent = "Add to Basket";
+    guitarCard.appendChild(addButton);
+
+    guitarContainer.appendChild(guitarCard);
   }
+}
 
-const pinky = new Guitar("Fender Strat", "Price: £2000", "hi");
+const pinky = new Guitar("Fender Strat", "Price: £1000", "In stock");
 console.log(pinky);
+
+renderGuitars();
 // declare variable guitar container
 // create function render guitars
 // this function will loop through array, everytime it loops, it will create card through dom manipulation 

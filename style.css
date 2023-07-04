@@ -23,7 +23,7 @@ nav {
 
 }
 
-#guitar-card {
+#guitar-container {
     border: 1px solid black;
     width: 200px;
     height: 300px;
@@ -33,7 +33,7 @@ nav {
     box-shadow: -12px 10px 30px 0px rgba(171,171,171,0.93);
 }
 
-#guitar-card:hover {
+#guitar-container:hover {
     cursor: pointer;
     transform: scale(102%);
 }
