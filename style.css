@@ -20,6 +20,7 @@ nav {
     display: flex;
     justify-content: flex-end;
     margin-right: 4rem;
+    margin-left: 4rem;
 
 }
 
@@ -49,4 +50,11 @@ button {
 
 button:active{
     transform: scale(96%);
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
 }

@@ -14,9 +14,9 @@ console.log("Welcome to my guitar shop");
 
 const allGuitars = [];
 
-function Guitar(name, price, stock) {
+function Guitar(name, src, price, stock) {
   this.name = name;
-  this.img = "./images/" + name + ".jpg";
+  this.src = "./images/" + src + ".jpg";
   this.price = price;
   this.stock = stock;
   allGuitars.push(this);
@@ -32,7 +32,7 @@ function renderGuitars() {
     guitarCard.setAttribute("class", "guitar-card");
 
     const guitarImage = document.createElement("img");
-    guitarImage.setAttribute("src", guitar.img);
+    guitarImage.setAttribute("src", guitar.src);
     guitarImage.setAttribute("alt", guitar.name);
     guitarCard.appendChild(guitarImage);
 
@@ -56,7 +56,7 @@ function renderGuitars() {
   }
 }
 
-const pinky = new Guitar("Fender Strat", "Price: £1000", "In stock");
+const pinky = new Guitar("Fender Strat", "fender-pink", "Price: £1000", "In stock");
 console.log(pinky);
 
 renderGuitars();
