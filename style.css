@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&family=Roboto&display=swap');
 
 *{
-    color: black;
+    /* color: black; */
     font-family: 'Quicksand', sans-serif;
     /* font-family: 'Roboto', sans-serif; */
     font-size: 10px;
@@ -26,9 +26,11 @@ header {
 
 nav {
     /* border: 1px solid black; */
-    margin-right: 4rem;
-    margin-left: 4rem;
+    margin: 0;
+    background-color: rgb(41, 41, 41);
+    color: white;
     display: flex;
+    width: 100%;
 }
 
 .guitar-card {
@@ -37,11 +39,11 @@ nav {
     align-items: center;
     flex-direction: column;
     border: 1px solid black;
-    width: 130px;
-    height: 220px;
+    width: 150px;
+    height: 240px;
     border-radius: 5px;
     padding: 10px;
-    margin: 20px 30px;
+    margin: 20px;
     box-shadow: -12px 10px 30px 0px rgba(171,171,171,0.93);
 }
 
@@ -53,6 +55,9 @@ nav {
 
 #guitar-container {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 img {
@@ -67,6 +72,17 @@ button {
 
 button:active{
     transform: scale(96%);
+}
+
+#main-about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#about {
+    width: 400px;
+    text-align: center;
 }
 
 footer {

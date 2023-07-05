@@ -56,10 +56,22 @@ function renderGuitars() {
   }
 }
 
-const pinky = new Guitar("Fender Strat", "fender-pink.jpg", "Price: £1000", "In stock");
-const angelico = new Guitar("D'Angelico Premier Mini", "angelico.jpg", "Price: £699", "In stock");
-const gibson = new Guitar("Gibson ES 335", "gibson335.webp", "Price: £4200", "In stock");
-const lowden = new Guitar("Lowden Wee 25", "lowden.jpg", "Price: £2700", "Out of stock");
+const pinky = new Guitar("Fender Strat", "pinky.jpeg", "Price: £1000", "In stock");
+const angelico = new Guitar("D'Angelico Premier Mini", "dangelico.jpeg", "Price: £699", "In stock");
+const gibson = new Guitar("Gibson ES 335", "335.jpeg", "Price: £4200", "In stock");
+const lowden = new Guitar("Lowden Wee 25", "lowden.jpeg", "Price: £2700", "Out of stock");
+const prs = new Guitar("Prs", "prs.jpeg", "Price: £3799", "In stock");
+const suhr = new Guitar("Suhr", "suhr.jpeg", "Price: £3259", "In stock");
+const martin = new Guitar("Martin D-45", "martind45.jpeg", "Price: £2799", "In stock");
+const lespaul = new Guitar("Gibson Les Paul", "lespaul.jpeg", "Price: £2699", "In stock");
+const silversky = new Guitar("Prs Silver Sky", "silversky.jpeg", "Price: £2499", "In stock");
+const telly = new Guitar("Fender Telecaster", "telecaster.jpeg", "Price: £2999", "In stock");
+const sg = new Guitar("Gibson SG", "sg.jpeg", "Price: £1999", "In stock");
+const epiphone = new Guitar("Epiphone Noel Gallagher Riviera", "epiphone-gallagher.jpeg", "Price: £799", "In stock");
+const jaguar = new Guitar("Fender Jaguar", "jaguar.jpeg", "Price: £2799", "In stock");
+const bbking = new Guitar("Gibson BB King", "bbking.jpeg", "Price: £5799", "In stock");
+const ibanez = new Guitar("Ibanez", "ibanez.jpeg", "Price: £2799", "In stock");
+
 
 
 renderGuitars();
