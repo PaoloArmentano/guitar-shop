@@ -3,8 +3,7 @@
 *{
     /* color: black; */
     font-family: 'Quicksand', sans-serif;
-    /* font-family: 'Roboto', sans-serif; */
-    font-size: 10px;
+
 }
 
 h1{
@@ -32,6 +31,7 @@ nav {
     display: flex;
     justify-content: center;
     width: 100%;
+    font-weight: bold;
 }
 
 a {
@@ -50,12 +50,13 @@ a:visited {
     align-items: center;
     flex-direction: column;
     border: 1px solid rgb(170, 170, 170);
-    width: 150px;
-    height: 240px;
+    width: 170px;
+    height: 280px;
     border-radius: 5px;
     padding: 10px;
     margin: 20px;
     box-shadow: -1px 4px 11px -1px rgba(0,0,0,0.54);
+    font-size: 13px;
 }
 
 .guitar-card:hover {
@@ -99,10 +100,13 @@ button:active{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 15px;
+    letter-spacing: 0.02em;
+    line-height: 1.7;
 }
 
 #about {
-    width: 400px;
+    width: 560px;
     text-align: center;
 }
 
