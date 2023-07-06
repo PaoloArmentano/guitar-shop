@@ -75,6 +75,42 @@ const ibanez = new Guitar("Ibanez", "ibanez.jpeg", "Price: £2799", "In stock");
 
 
 renderGuitars();
+
+// Function to set the theme
+function setTheme(theme) {
+  const container = document.getElementById('container');
+  container.classList.remove('dark-theme', 'light-theme');
+  container.classList.add(theme);
+
+  // Store the theme preference in local storage
+  localStorage.setItem('theme', theme);
+}
+
+// Function to toggle the theme based on user preference
+function toggleTheme() {
+  const container = document.getElementById('container');
+  const currentTheme = container.classList.contains('dark-theme')
+    ? 'dark-theme'
+    : 'light-theme';
+
+  const newTheme = currentTheme === 'dark-theme' ? 'light-theme' : 'dark-theme';
+  setTheme(newTheme);
+}
+
+// Function to load the user's preferred theme from local storage
+function loadTheme() {
+  const storedTheme = localStorage.getItem('theme');
+  if (storedTheme) {
+    setTheme(storedTheme);
+  }
+}
+
+// Event listeners for theme buttons
+document.getElementById('darkThemeBtn').addEventListener('click', toggleTheme);
+document.getElementById('lightThemeBtn').addEventListener('click', toggleTheme);
+
+// Load the user's preferred theme on page load
+loadTheme();
 // declare variable guitar container
 // create function render guitars
 // this function will loop through array, everytime it loops, it will create card through dom manipulation 
